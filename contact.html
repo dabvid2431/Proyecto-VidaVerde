@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Contacto | Vida Verde</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F7F6F0',
+              card: '#FFFFFF',
+              green: '#5B6E4E',
+              'green-dark': '#435239',
+              'green-light': '#E8EFE5',
+              text: '#2B3028',
+              muted: '#6C7367',
+              accent: '#C5A059'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased min-h-screen flex flex-col">
+  <div class="bg-brand-green text-white text-[11px] font-medium py-1.5 px-4 text-center tracking-wide flex justify-center items-center gap-2">
+    <span>🌿 Envío GRATIS en pedidos superiores a $40.00</span>
+    <span class="hidden sm:inline">| 100% Ingredientes Naturales Certificados</span>
+  </div>
+
+  <header class="site-header bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 sticky top-0 z-40">
+    <div class="site-header__inner container max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-green/15 flex items-center justify-center text-brand-green font-bold text-xl group-hover:scale-105 transition-transform">
+          🌱
+        </div>
+        <div>
+          <h1 class="font-serif text-2xl font-bold tracking-tight text-stone-900 leading-none">VIDA VERDE</h1>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brand-muted block mt-1">— Productos Naturales —</span>
+        </div>
+      </a>
+
+      <nav class="site-nav flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-stone-700">
+        <a href="index.html" class="text-brand-green font-bold">Inicio</a>
+        <a href="index.html#catalogo" class="hover:text-brand-green transition">Catálogo</a>
+        <a href="contact.html" class="hover:text-brand-green transition text-white bg-brand-green px-4 py-2 rounded-full">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container max-w-4xl mx-auto px-4 sm:px-6 py-24 flex items-center justify-center">
+    <div class="contact-panel card card-shadow rounded-[32px] border border-stone-200 bg-white p-10 shadow-xl w-full max-w-2xl">
+      <div class="inline-flex items-center justify-center mx-auto mb-6 w-16 h-16 rounded-full bg-brand-green-light text-brand-green">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+      </div>
+      <h1 class="font-serif text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight text-center">Contacto</h1>
+      <p class="mt-4 text-stone-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto text-center">
+        Para pedidos o consultas, escribe directamente por WhatsApp al número oficial. Respuesta rápida y personalizada.
+      </p>
+      <div class="mt-10 flex flex-col items-center gap-4">
+        <a href="https://wa.me/593981992990?text=Hola%20Vida%20Verde,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn-primary rounded-full px-8 py-4 text-sm shadow-xl shadow-brand-green/20 inline-flex items-center justify-center gap-2">
+          <i data-lucide="smartphone" class="w-5 h-5"></i>
+          Contactar por WhatsApp
+        </a>
+        <p class="text-sm text-stone-500 text-center">También puedes enviar tu mensaje directo al siguiente número.</p>
+      </div>
+      <div class="mt-8 text-center">
+        <p class="font-semibold text-stone-900 text-lg">+593 98 199 2990</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-400 text-xs py-10 border-t border-stone-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-serif text-white text-lg font-bold">VIDA VERDE</h4>
+        <p class="mt-2 text-stone-400 leading-relaxed text-[11px]">Comprometidos con el bienestar natural, la sostenibilidad y la belleza consciente.</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-2">Contacto Directo</h5>
+        <p>📱 WhatsApp: +593 99 123 4567</p>
+        <p class="mt-1">📍 Quito, Ecuador</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-2">Pagos Seguros</h5>
+        <p class="text-stone-400 text-[11px]">Aceptamos Transferencia Directa, Efectivo contra entrega y tarjetas a través de WhatsApp.</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-8 pt-4 border-t border-stone-800 text-center text-[10px] text-stone-500">
+      © 2026 Vida Verde. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>

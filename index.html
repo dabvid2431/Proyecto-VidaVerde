@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Vida Verde — Cosmética Orgánica & Suplementos Puros</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#F7F6F0',
+              card: '#FFFFFF',
+              green: '#5B6E4E',
+              'green-dark': '#435239',
+              'green-light': '#E8EFE5',
+              text: '#2B3028',
+              muted: '#6C7367',
+              accent: '#C5A059'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Iconos Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- BARRA DE ANUNCIOS SUPERIOR -->
+  <div class="bg-brand-green text-white text-[11px] font-medium py-1.5 px-4 text-center tracking-wide flex justify-center items-center gap-2">
+    <span>🌿 Envío GRATIS en pedidos superiores a $40.00</span>
+    <span class="hidden sm:inline">| 100% Ingredientes Naturales Certificados</span>
+  </div>
+
+  <!-- ENCABEZADO PRINCIPAL -->
+  <header class="site-header bg-brand-bg/95 backdrop-blur-md border-b border-stone-200/80 sticky top-0 z-40">
+    <div class="site-header__inner container flex justify-between items-center">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-brand-green/15 flex items-center justify-center text-brand-green font-bold text-xl group-hover:scale-105 transition-transform">
+          🌱
+        </div>
+        <div>
+          <h1 class="font-serif text-2xl font-bold tracking-tight text-stone-900 leading-none">
+            VIDA VERDE
+          </h1>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brand-muted block mt-1">— Productos Naturales —</span>
+        </div>
+      </a>
+
+      <!-- Menú Central (Escritorio) -->
+      <nav class="site-nav flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-stone-700">
+        <a href="#" class="text-brand-green font-bold nav-link" data-section="inicio">Inicio</a>
+        <a href="#catalogo" class="hover:text-brand-green transition nav-link" data-section="catalogo">Catálogo</a>
+        <a href="#nosotros" class="hover:text-brand-green transition nav-link" data-section="nosotros">Sobre Nosotros</a>
+        <a href="contact.html" class="hover:text-brand-green transition nav-link" data-section="contacto">Contacto</a>
+      </nav>
+
+      <!-- Botón Carrito con Badge Dinámico -->
+      <button onclick="toggleCarrito()" class="relative flex items-center gap-2 bg-white border border-stone-200/80 px-3.5 py-2 rounded-full hover:border-brand-green transition shadow-sm">
+        <i data-lucide="shopping-bag" class="w-4 h-4 text-brand-green"></i>
+        <span class="text-xs font-bold text-stone-800">Carrito</span>
+        <span id="cart-count" class="bg-brand-green text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center ml-1">0</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- HERO BANNER PREMIUM -->
+  <section class="hero-section section container max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-6 w-full">
+    <div class="relative rounded-3xl overflow-hidden bg-stone-900 min-h-[320px] sm:min-h-[380px] flex items-center shadow-sm">
+      
+      <!-- Imagen de Fondo -->
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1600" 
+           alt="Cosmética Orgánica" 
+           class="absolute inset-0 w-full h-full object-cover opacity-85">
+      
+      <!-- Degradado -->
+      <div class="absolute inset-0 bg-gradient-to-r from-stone-950/75 via-stone-900/40 to-transparent"></div>
+
+      <!-- Contenido Banner -->
+      <div class="relative z-10 p-6 sm:p-12 max-w-xl text-white space-y-4">
+        <span class="inline-block bg-white/20 backdrop-blur-md text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">
+          Edición Orgánica 2026
+        </span>
+        <h2 class="section-title font-serif text-2xl sm:text-4xl leading-snug font-normal">
+          Cuídate Naturalmente con <br>
+          <span class="font-semibold text-brand-accent">VIDA VERDE</span> - Cosmética Orgánica y Suplementos Puros.
+        </h2>
+        <p class="text-xs text-stone-200 font-light max-w-md hidden sm:block">
+          Fórmulas botánicas elaboradas a mano con extractos naturales libres de parabenos y químicos dañinos.
+        </p>
+        <a href="#catalogo" class="inline-flex items-center gap-2 bg-brand-green hover:bg-brand-green-dark text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">
+          Explorar Catálogo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL: CATEGORÍAS + BUSCADOR + PRODUCTOS -->
+  <section id="catalogo" class="catalog-section section container max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-4 gap-8 my-4 flex-1">
+    
+    <!-- SIDEBAR DE FILTROS (Izquierda) -->
+    <aside class="catalog-sidebar lg:col-span-1 space-y-6">
+      
+      <div>
+        <h3 class="font-serif font-bold text-base text-stone-900 pb-2 border-b border-stone-300 flex justify-between items-center">
+          <span>Categorías</span>
+          <i data-lucide="sliders-horizontal" class="w-4 h-4 text-stone-400"></i>
+        </h3>
+
+        <ul class="space-y-1.5 text-xs font-medium text-stone-600 mt-3" id="sidebar-categories">
+          <li>
+            <button onclick="seleccionarCategoria('todos', this)" class="cat-btn active w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition bg-brand-green text-white font-semibold">
+              <span>✨ Todos los productos</span>
+              <span id="count-todos" class="text-[10px] opacity-80">6</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="seleccionarCategoria('cosmetica', this)" class="cat-btn w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition hover:bg-stone-200/60">
+              <span>Cosmética</span>
+              <span id="count-cosmetica" class="text-[10px] text-stone-400">4</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="seleccionarCategoria('suplementos', this)" class="cat-btn w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition hover:bg-stone-200/60">
+              <span>Suplementos</span>
+              <span id="count-suplementos" class="text-[10px] text-stone-400">1</span>
+            </button>
+          </li>
+          <li>
+            <button onclick="seleccionarCategoria('tes', this)" class="cat-btn w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition hover:bg-stone-200/60">
+              <span>Tés e Infusiones</span>
+              <span id="count-tes" class="text-[10px] text-stone-400">1</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Buscador con icono de limpiar -->
+      <div class="search-panel">
+        <label class="block text-xs font-bold text-stone-700 mb-1.5">Buscar en la tienda</label>
+        <div class="relative">
+          <input type="text" id="search-input" oninput="filtrarProductos()" placeholder="Ej: Argán, Serum, Té..." 
+                 class="w-full pl-9 pr-8 py-2.5 rounded-xl bg-white border border-stone-300/80 text-xs focus:outline-none focus:ring-1 focus:ring-brand-green shadow-xs">
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute left-3 top-3"></i>
+          <button onclick="limpiarBuscador()" class="absolute right-2.5 top-3 text-stone-400 hover:text-stone-700">
+            <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Banner de garantía -->
+      <div class="guarantee-panel p-4 bg-brand-green-light rounded-2xl border border-brand-green/20 space-y-2">
+        <div class="flex items-center gap-2 text-brand-green font-bold text-xs">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Garantía Vida Verde</span>
+        </div>
+        <p class="text-[11px] text-stone-600 leading-relaxed">
+          Todos nuestros envíos cuentan con empaques biodegradables y garantía de satisfacción de 30 días.
+        </p>
+      </div>
+
+    </aside>
+
+    <!-- GRID DE PRODUCTOS (Derecha) -->
+    <main class="lg:col-span-3">
+      
+      <!-- Encabezado de catálogo -->
+      <div class="catalog-header flex justify-between items-center mb-4 pb-2 border-b border-stone-200">
+        <p class="text-xs text-stone-500" id="resultados-texto">Mostrando todos los productos</p>
+        <select id="sort-select" onchange="ordenarProductos()" class="text-xs bg-white border border-stone-300 rounded-lg px-2.5 py-1.5 text-stone-700 focus:outline-none">
+          <option value="default">Ordenar por: Destacados</option>
+          <option value="price-asc">Precio: Menor a Mayor</option>
+          <option value="price-desc">Precio: Mayor a Menor</option>
+          <option value="rating">Mejor Calificados</option>
+        </select>
+      </div>
+
+      <!-- Contenedor del Grid -->
+      <div id="grid-productos" class="product-grid grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <!-- Render dinámico desde JS -->
+      </div>
+    </main>
+
+  </section>
+
+  <!-- MODAL DE VISTA PREVIA RÁPIDA DE PRODUCTO -->
+  <div id="product-modal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+      <button onclick="cerrarModalProducto()" class="absolute top-3 right-3 z-10 w-8 h-8 bg-stone-100 hover:bg-stone-200 rounded-full flex items-center justify-center text-stone-600">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="w-full md:w-1/2 bg-stone-100 h-56 md:h-auto">
+        <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+      </div>
+
+      <div class="p-6 w-full md:w-1/2 flex flex-col justify-between space-y-4">
+        <div>
+          <span id="modal-tag" class="bg-brand-green-light text-brand-green text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"></span>
+          <h3 id="modal-title" class="font-serif font-bold text-stone-900 text-lg mt-2 leading-tight"></h3>
+          <p id="modal-price" class="text-xl font-bold text-brand-green mt-1"></p>
+          <p id="modal-desc" class="text-xs text-stone-600 mt-2 leading-relaxed"></p>
+        </div>
+
+        <div class="space-y-3 pt-2 border-t border-stone-100">
+          <div class="flex items-center gap-1 text-amber-500 text-xs" id="modal-stars"></div>
+          <button id="modal-add-btn" class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-semibold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i> Añadir al Carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CARRITO -->
+  <div id="cart-modal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex justify-end">
+    <div class="bg-white w-full max-w-md h-full flex flex-col shadow-2xl cart-panel">
+      <div class="p-5 bg-brand-bg border-b border-stone-200 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-brand-green"></i>
+          <h3 class="font-serif font-bold text-stone-900 text-base">Tu Carrito de Compras</h3>
+        </div>
+        <button onclick="toggleCarrito()" class="text-stone-400 hover:text-stone-800"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      
+      <!-- Acción de borrar producto seleccionado -->
+      <!-- Lista de Items en Carrito -->
+      <div id="cart-items" class="flex-1 overflow-y-auto p-5 divide-y divide-stone-100 space-y-2"></div>
+
+      <!-- Formulario de Finalización -->
+      <div class="p-5 bg-brand-bg border-t border-stone-200 space-y-3">
+        <input type="text" id="client-name" placeholder="Tu Nombre y Apellido" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        <input type="text" id="client-address" placeholder="Dirección Exacta de Entrega" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        <div class="space-y-1.5 pt-2 border-t text-xs">
+          <div class="flex justify-between text-stone-500">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+          <div class="flex justify-between text-stone-500">
+            <span>Envío:</span>
+            <span id="cart-shipping">$0.00</span>
+          </div>
+          <div class="flex justify-between font-bold text-stone-900 text-sm pt-1 border-t">
+            <span>Total Final:</span>
+            <span id="cart-total" class="text-brand-green text-base">$0.00</span>
+          </div>
+        </div>
+
+        <button onclick="enviarPedidoWhatsApp()" class="w-full bg-brand-green hover:bg-brand-green-dark text-white font-semibold py-3 rounded-xl flex items-center justify-center gap-2 text-xs transition shadow-md">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> Confirmar Pedido por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 bg-stone-900 text-white text-xs px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 transition-all duration-300 opacity-0 translate-y-5 pointer-events-none">
+    <i data-lucide="check-circle" class="w-4 h-4 text-emerald-300"></i>
+    <span id="toast-message">Producto añadido al carrito</span>
+  </div>
+
+  <!-- PIE DE PÁGINA ELEGANTE -->
+  <footer class="bg-stone-900 text-stone-400 text-xs py-10 border-t border-stone-800 mt-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-serif text-white text-lg font-bold">VIDA VERDE</h4>
+        <p class="mt-2 text-stone-400 leading-relaxed text-[11px]">Comprometidos con el bienestar natural, la sostenibilidad y la belleza consciente.</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-2">Contacto Directo</h5>
+        <p>📱 WhatsApp: +593 99 123 4567</p>
+        <p class="mt-1">📍 Quito, Ecuador</p>
+      </div>
+      <div>
+        <h5 class="text-white font-bold mb-2">Pagos Seguros</h5>
+        <p class="text-stone-400 text-[11px]">Aceptamos Transferencia Directa, Efectivo contra entrega y tarjetas a través de WhatsApp.</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-8 pt-4 border-t border-stone-800 text-center text-[10px] text-stone-500">
+      © 2026 Vida Verde. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
