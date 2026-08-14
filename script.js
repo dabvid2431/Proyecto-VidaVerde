@@ -4,67 +4,6 @@ const MINIMO_ENVIO_GRATIS = 40.00;
 
 // Catálogo enriquecido con estrellas, stock e ingredientes
 const productos = [
-  { 
-    id: 1, 
-    nombre: "Aceite de Argán Orgánico (50ml)", 
-    categoria: "cosmetica", 
-    precio: 22.00, 
-    rating: 4.9,
-    desc: "Hidratación pura prensada en frío para el rostro y cabello. Rico en vitamina E y ácidos grasos esenciales.", 
-    tags: ["100% Orgánico", "Vegano"], 
-    img: "assets/new_images/aceite_argan.jpg" 
-  },
-  { 
-    id: 2, 
-    nombre: "Crema Facial Hidratante (60g)", 
-    categoria: "cosmetica", 
-    precio: 28.00, 
-    rating: 4.8,
-    desc: "Nutrición profunda formulada con manteca de karité, aloe vera puro y extracto de manzanilla.", 
-    tags: ["100% Orgánico"], 
-    img: "assets/new_images/crema_facial.jpg" 
-  },
-  { 
-    id: 3, 
-    nombre: "Jabón Artesanal de Lavanda (110g)", 
-    categoria: "cosmetica", 
-    precio: 8.50, 
-    rating: 4.7,
-    desc: "Elaborado a mano mediante saponificación en frío. Limpia suavemente reduciendo la irritación.", 
-    tags: ["Artesanal", "Vegano"], 
-    img: "assets/new_images/jabon_lavanda.jpg" 
-  },
-  { 
-    id: 4, 
-    nombre: "Cápsulas de Cúrcuma Curcumin (90 caps.)", 
-    categoria: "suplementos", 
-    precio: 35.00, 
-    rating: 5.0,
-    desc: "Potente antiinflamatorio y antioxidante natural suplementado con piperina para máxima absorción.", 
-    tags: ["Suplemento Puro"], 
-    img: "assets/new_images/curcuma_capsulas.jpg" 
-  },
-  { 
-    id: 5, 
-    nombre: "Infusión de Hierbas Silvestres (100g)", 
-    categoria: "tes", 
-    precio: 12.00, 
-    rating: 4.6,
-    desc: "Mezcla digestiva de menta, toronjil y flor de azahar seleccionados de cultivos agroecológicos.", 
-    tags: ["100% Orgánico"], 
-    img: "assets/new_images/infusion_hierbas.jpg" 
-  },
-  { 
-    id: 6, 
-    nombre: "Serum Facial Revitalizante (30ml)", 
-    categoria: "cosmetica", 
-    precio: 32.00, 
-    rating: 4.9,
-    desc: "Ácido hialurónico vegetal concentrado con vitamina C para iluminar y reafirmar la piel.", 
-    tags: ["Best Seller", "Vegano"], 
-    img: "assets/new_images/serum_facial.jpg" 
-  }
-  ,
   // Productos añadidos desde catálogo externo (precios temporales $0.00)
   { id: 7, nombre: "Té Divina (50g)", categoria: "tes", precio: 0.00, rating: 4.5, desc: "Infusión aromática seleccionada para bienestar diario.", tags: ["Infusión"], img: "assets/new_images/te_divina.jpg" },
   { id: 8, nombre: "Gano - Cápsulas (90 caps)", categoria: "suplementos", precio: 0.00, rating: 4.6, desc: "Ganoderma Lucidum (Reishi) en cápsulas para apoyo inmunológico.", tags: ["Suplemento", "Reishi"], img: "assets/new_images/gano.jpg" },
@@ -133,7 +72,7 @@ function renderProductos(lista) {
     grid.innerHTML += `
       <div class="product-card fade-up bg-white rounded-2xl border border-stone-200/80 p-3 flex flex-col justify-between">
         <div>
-          <div class="aspect-square rounded-xl overflow-hidden bg-stone-100 mb-3 relative group">
+          <div class="aspect-square rounded-xl overflow-hidden bg-stone-100 mb-3 relative group cursor-pointer" onclick="verDetalleModal(${p.id})" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); verDetalleModal(${p.id}); }">
             <img src="${p.img}" alt="${p.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
             <span class="absolute top-2 right-2 bg-white/90 backdrop-blur-md text-stone-800 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-xs">
               ★ ${p.rating}
@@ -389,19 +328,25 @@ function mostrarToast(mensaje) {
 
 function enviarPedidoWhatsApp() {
   if (carrito.length === 0) return alert("Tu carrito está vacío.");
-  const nombre = document.getElementById('client-name').value.trim();
+
+  const nombreCompleto = document.getElementById('client-name').value.trim();
+  const pais = document.getElementById('client-country').value.trim();
+  const estado = document.getElementById('client-state').value.trim();
   const direccion = document.getElementById('client-address').value.trim();
-  
-  if (!nombre || !direccion) {
-    return alert("Por favor completa tu nombre y dirección para realizar el despacho.");
+  const codigoPostal = document.getElementById('client-postal-code').value.trim();
+
+  if (!nombreCompleto || !pais || !estado || !direccion) {
+    return alert("Por favor completa tu nombre completo, país, estado y dirección para realizar el despacho.");
   }
 
   let subtotal = 0;
   let msg = `*NUEVO PEDIDO - VIDA VERDE*\n`;
   msg += `==============================\n`;
-  msg += `Cliente: ${nombre}\n`;
-  msg += `Dirección de entrega: ${direccion}\n`;
-  msg += `Mapa dirección: https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(direccion)}\n`;
+  msg += `Cliente: ${nombreCompleto}\n`;
+  msg += `País: ${pais}\n`;
+  msg += `Estado: ${estado}\n`;
+  msg += `Dirección: ${direccion}\n`;
+  if (codigoPostal) msg += `Código postal: ${codigoPostal}\n`;
   msg += `------------------------------\n`;
   msg += `Detalle de productos:\n`;
 

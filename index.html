@@ -15,8 +15,8 @@
   <meta property="og:url" content="https://github.com/dabvid2431/Proyecto-VidaVerde">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/favicon.svg">
   
   <title>Vida Verde — Cosmética Orgánica & Suplementos Puros</title>
   
@@ -159,12 +159,6 @@
             <button onclick="seleccionarCategoria('todos', this)" class="cat-btn active w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition bg-brand-green text-white font-semibold">
               <span>✨ Todos los productos</span>
               <span id="count-todos" class="text-[10px] opacity-80">6</span>
-            </button>
-          </li>
-          <li>
-            <button onclick="seleccionarCategoria('cosmetica', this)" class="cat-btn w-full text-left px-3 py-2 rounded-xl flex justify-between items-center transition hover:bg-stone-200/60">
-              <span>Cosmética</span>
-              <span id="count-cosmetica" class="text-[10px] text-stone-400">4</span>
             </button>
           </li>
           <li>
@@ -335,8 +329,13 @@
 
       <!-- Formulario de Finalización -->
       <div class="p-5 bg-brand-bg border-t border-stone-200 space-y-3">
-        <input type="text" id="client-name" placeholder="Tu Nombre y Apellido" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
-        <input type="text" id="client-address" placeholder="Dirección Exacta de Entrega" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        <input type="text" id="client-name" placeholder="Nombre y Apellido" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <input type="text" id="client-country" placeholder="País" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+          <input type="text" id="client-state" placeholder="Estado" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        </div>
+        <input type="text" id="client-address" placeholder="Dirección exacta / Calle principal y secundaria" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
+        <input type="text" id="client-postal-code" placeholder="Código postal (opcional)" class="w-full p-2.5 text-xs bg-white rounded-xl border border-stone-300 focus:outline-none focus:ring-1 focus:ring-brand-green">
         <div class="space-y-1.5 pt-2 border-t text-xs">
           <div class="flex justify-between text-stone-500">
             <span>Subtotal:</span>

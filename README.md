@@ -33,7 +33,4 @@ python -m http.server 8000
 http://localhost:8000
 ```
 
-## Contacto
-
-WhatsApp: +1 (929) 759-8940
 
