@@ -3,6 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Tienda en línea de productos naturales: cosmética orgánica, suplementos puros, cafés y tés infusionados. Envío gratis en pedidos superiores a $40.">
+  <meta name="keywords" content="cosmética orgánica, suplementos naturales, productos ecológicos, belleza natural, salud, bienestar">
+  <meta name="author" content="Vida Verde">
+  <meta name="theme-color" content="#5B6E4E">
+  
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vida Verde — Cosmética Orgánica & Suplementos Puros">
+  <meta property="og:description" content="Descubre nuestra colección de productos naturales y orgánicos. Cosmética, suplementos, cafés y tés de alta calidad.">
+  <meta property="og:url" content="https://github.com/dabvid2431/Proyecto-VidaVerde">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  
   <title>Vida Verde — Cosmética Orgánica & Suplementos Puros</title>
   
   <!-- Tailwind CSS CDN -->
@@ -65,12 +80,17 @@
       </a>
 
       <!-- Menú Central (Escritorio) -->
-      <nav class="site-nav flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-stone-700">
+      <nav id="desktop-nav" class="hidden md:flex site-nav flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-wider text-stone-700">
         <a href="#" class="text-brand-green font-bold nav-link" data-section="inicio">Inicio</a>
         <a href="#catalogo" class="hover:text-brand-green transition nav-link" data-section="catalogo">Catálogo</a>
         <a href="#nosotros" class="hover:text-brand-green transition nav-link" data-section="nosotros">Sobre Nosotros</a>
         <a href="contact.html" class="hover:text-brand-green transition nav-link" data-section="contacto">Contacto</a>
       </nav>
+
+      <!-- Botón Menú Hamburguesa (Móvil) -->
+      <button id="mobile-menu-btn" class="md:hidden text-brand-green hover:scale-110 transition">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
 
       <!-- Botón Carrito con Badge Dinámico -->
       <button onclick="toggleCarrito()" class="relative flex items-center gap-2 bg-white border border-stone-200/80 px-3.5 py-2 rounded-full hover:border-brand-green transition shadow-sm">
@@ -82,12 +102,20 @@
     </div>
   </header>
 
+  <!-- MENÚ MÓVIL -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200/80 px-4 py-4 flex flex-col gap-2">
+    <a href="#" class="block text-brand-green font-bold text-sm py-2 px-3 rounded-lg hover:bg-brand-green-light transition">Inicio</a>
+    <a href="#catalogo" class="block text-stone-700 text-sm py-2 px-3 rounded-lg hover:bg-stone-100 hover:text-brand-green transition">Catálogo</a>
+    <a href="#nosotros" class="block text-stone-700 text-sm py-2 px-3 rounded-lg hover:bg-stone-100 hover:text-brand-green transition">Sobre Nosotros</a>
+    <a href="contact.html" class="block text-stone-700 text-sm py-2 px-3 rounded-lg hover:bg-stone-100 hover:text-brand-green transition">Contacto</a>
+  </nav>
+
   <!-- HERO BANNER PREMIUM -->
   <section class="hero-section section container max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-6 w-full">
     <div class="relative rounded-3xl overflow-hidden bg-stone-900 min-h-[320px] sm:min-h-[380px] flex items-center shadow-sm">
       
       <!-- Imagen de Fondo -->
-      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1600" 
+      <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=1600"
            alt="Cosmética Orgánica" 
            class="absolute inset-0 w-full h-full object-cover opacity-85">
       
@@ -206,6 +234,59 @@
       </div>
     </main>
 
+  </section>
+
+  <!-- SECCIÓN: SOBRE NOSOTROS -->
+  <section id="nosotros" class="section container max-w-7xl mx-auto px-4 sm:px-6 py-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Contenido Texto -->
+      <div class="space-y-6">
+        <div>
+          <span class="text-brand-green font-bold text-sm uppercase tracking-widest">Conoce Nuestro Movimiento</span>
+          <h2 class="font-serif text-4xl md:text-5xl font-bold text-stone-900 mt-2 leading-tight">
+            Belleza Consciente y Bienestar Natural
+          </h2>
+        </div>
+        
+        <p class="text-stone-600 text-base leading-relaxed">
+          En Vida Verde creemos que la verdadera belleza y el bienestar comienzan desde adentro. Nos comprometemos a ofrecer productos 100% naturales y orgánicos, cuidadosamente seleccionados para el bienestar de tu cuerpo y mente.
+        </p>
+        
+        <p class="text-stone-600 text-base leading-relaxed">
+          Cada producto en nuestro catálogo ha sido elegido por su calidad, pureza y beneficios comprobados. No utilizamos químicos dañinos ni ingredientes artificiales. Nos asociamos solo con proveedores que comparten nuestros valores de sostenibilidad y responsabilidad ambiental.
+        </p>
+        
+        <div class="grid grid-cols-2 gap-6 pt-4">
+          <div class="space-y-2">
+            <p class="text-3xl font-bold text-brand-green">24+</p>
+            <p class="text-stone-600 text-sm">Productos Premium</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-3xl font-bold text-brand-green">100%</p>
+            <p class="text-stone-600 text-sm">Natural y Orgánico</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-3xl font-bold text-brand-green">30 Días</p>
+            <p class="text-stone-600 text-sm">Garantía Total</p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-3xl font-bold text-brand-green">Eco</p>
+            <p class="text-stone-600 text-sm">Empaques Sostenibles</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="relative">
+        <div class="aspect-square rounded-3xl overflow-hidden bg-brand-green-light">
+          <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&q=80&w=600" 
+               alt="Productos Vida Verde"
+               class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- MODAL DE VISTA PREVIA RÁPIDA DE PRODUCTO -->

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="50" fill="#F7F6F0"/>
+  <g transform="translate(50, 50)">
+    <path d="M0,-20 Q10,-15 15,-5 Q10,0 0,5 Q-10,0 -15,-5 Q-10,-15 0,-20" fill="#5B6E4E"/>
+    <path d="M15,-10 Q22,-8 25,2 Q20,8 10,8 Q5,3 10,-5 Q12,-10 15,-10" fill="#5B6E4E"/>
+    <path d="M-15,-10 Q-22,-8 -25,2 Q-20,8 -10,8 Q-5,3 -10,-5 Q-12,-10 -15,-10" fill="#5B6E4E"/>
+    <circle cx="0" cy="3" r="2" fill="#F7F6F0"/>
+  </g>
+</svg>

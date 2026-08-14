@@ -1,15 +1,43 @@
 # Sistema operativo
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Archivos de log
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Carpetas de dependencias o build
 node_modules/
+dist/
+build/
 
 # Archivos temporales de editores
 .vscode/
+.idea/
 *.swp
+*.swo
 *.tmp
 *.bak
+*.orig
+*~
+
+# Ambiente virtual y dependencias Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Archivos del IDE
+.DS_Store
+.env
+.env.local
+
+# Cache del navegador
+.cache/
+
+# Archivos compilados
+*.o
+*.out
