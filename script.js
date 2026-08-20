@@ -5,27 +5,27 @@ const MINIMO_ENVIO_GRATIS = 40.00;
 // Catálogo enriquecido con estrellas, stock e ingredientes
 const productos = [
   // Productos añadidos desde catálogo externo (precios temporales $0.00)
-  { id: 7, nombre: "Té Divina (50g)", categoria: "tes", precio: 0.00, rating: 4.5, desc: "Infusión aromática seleccionada para bienestar diario.", tags: ["Infusión"], img: "assets/new_images/te_divina.jpg" },
-  { id: 8, nombre: "Gano - Cápsulas (90 caps)", categoria: "suplementos", precio: 0.00, rating: 4.6, desc: "Ganoderma Lucidum (Reishi) en cápsulas para apoyo inmunológico.", tags: ["Suplemento", "Reishi"], img: "assets/new_images/gano.jpg" },
+  { id: 7, nombre: "Té Divina (50g)", categoria: "tes", precio: 50.00, rating: 4.5, desc: "Infusión aromática seleccionada para bienestar diario.", tags: ["Infusión"], img: "assets/new_images/te_divina.jpg" },
+  { id: 8, nombre: "Gano - Cápsulas (90 caps)", categoria: "suplementos", precio: 50.00, rating: 4.6, desc: "Ganoderma Lucidum (Reishi) en cápsulas para apoyo inmunológico.", tags: ["Suplemento", "Reishi"], img: "assets/new_images/gano.jpg" },
 
   // Suplementos / productos funcionales
-  { id: 10, nombre: "Ignite - Cápsulas (60 caps)", categoria: "suplementos", precio: 0.00, rating: 4.6, desc: "Fórmula estimulante para rendimiento y energía.", tags: ["Suplemento"], img: "assets/new_images/ignite.jpg" },
+  { id: 10, nombre: "Ignite - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.6, desc: "Fórmula estimulante para rendimiento y energía.", tags: ["Suplemento"], img: "assets/new_images/ignite.jpg" },
   { id: 11, nombre: "Youth (Juventud colágeno)", categoria: "suplementos", precio: 0.00, rating: 4.7, desc: "Colágeno y nutrientes para piel y articulaciones.", tags: ["Colágeno"], img: "assets/new_images/youth_colageno.jpg" },
   { id: 12, nombre: "Cheat (Chet) - Suplemento", categoria: "suplementos", precio: 0.00, rating: 4.5, desc: "Complemento para apoyo en rutinas específicas.", tags: ["Suplemento"], img: "assets/new_images/cheat.jpg" },
 
   // Línea de Cafés (varios productos)
-  { id: 13, nombre: "Sculpt Black - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.5, desc: "Café intenso y oscuro con cuerpo robusto.", tags: ["Café"], img: "assets/new_images/sculpt_black.jpg" },
-  { id: 14, nombre: "Sculpt Tongkat Ali - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.4, desc: "Café funcional con extracto de Tongkat Ali.", tags: ["Café", "Funcional"], img: "assets/new_images/sculpt_tongkat_ali.jpg" },
-  { id: 15, nombre: "Sculpt Latte - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.3, desc: "Tostado suave pensado para bebidas con leche.", tags: ["Café", "Latte"], img: "assets/new_images/sculpt_latte.jpg" },
-  { id: 16, nombre: "Tongkat Ali - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.2, desc: "Mezcla con extracto de Tongkat Ali para energía.", tags: ["Café", "Funcional"], img: "assets/new_images/tongkat_ali.jpg" },
-  { id: 17, nombre: "Cappuccino - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.6, desc: "Mezcla clásica para cappuccino cremoso.", tags: ["Café", "Clásico"], img: "assets/new_images/cappuccino.jpg" },
-  { id: 18, nombre: "Latte - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.5, desc: "Tostado equilibrado ideal para latte.", tags: ["Café", "Latte"], img: "assets/new_images/latte.jpg" },
-  { id: 19, nombre: "Latte Dorado (Golden Latte) - Café (200g)", categoria: "cafes", precio: 0.00, rating: 4.6, desc: "Mezcla con cúrcuma y especias, sabor suave.", tags: ["Café", "Golden"], img: "assets/new_images/latte_dorado.jpg" },
-  { id: 20, nombre: "Latte Verde - Café (200g)", categoria: "cafes", precio: 0.00, rating: 4.4, desc: "Variante con matcha y notas herbales.", tags: ["Café", "Matcha"], img: "assets/new_images/latte_verde.jpg" },
-  { id: 21, nombre: "Hazelnut Latte - Café (200g)", categoria: "cafes", precio: 0.00, rating: 4.3, desc: "Aromas de avellana tostada para bebidas dulces.", tags: ["Café", "Saborizado"], img: "assets/new_images/hazelnut_latte.jpg" },
-  { id: 22, nombre: "Mocha - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.5, desc: "Mezcla para bebidas mocha con chocolate natural.", tags: ["Café", "Chocolate"], img: "assets/new_images/mocha.jpg" },
-  { id: 23, nombre: "Café Black - Café (250g)", categoria: "cafes", precio: 0.00, rating: 4.6, desc: "Café puro para apreciar cuerpo y amargor.", tags: ["Café"], img: "assets/new_images/cafe_black.jpg" },
-  { id: 24, nombre: "Café Divina Hot Chocolate - (15 sobres)", categoria: "cafes", precio: 0.00, rating: 4.5, desc: "Chocolate caliente premium infusionado con Reishi.", tags: ["Café", "Chocolate"], img: "assets/new_images/cafedivina_hot.jpg" }
+  { id: 13, nombre: "Sculpt Black - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Café intenso y oscuro con cuerpo robusto.", tags: ["Café"], img: "assets/new_images/sculpt_black.jpg" },
+  { id: 14, nombre: "Sculpt Tongkat Ali - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.4, desc: "Café funcional con extracto de Tongkat Ali.", tags: ["Café", "Funcional"], img: "assets/new_images/sculpt_tongkat_ali.jpg" },
+  { id: 15, nombre: "Sculpt Latte - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.3, desc: "Tostado suave pensado para bebidas con leche.", tags: ["Café", "Latte"], img: "assets/new_images/sculpt_latte.jpg" },
+  { id: 16, nombre: "Tongkat Ali - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.2, desc: "Mezcla con extracto de Tongkat Ali para energía.", tags: ["Café", "Funcional"], img: "assets/new_images/tongkat_ali.jpg" },
+  { id: 17, nombre: "Cappuccino - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.6, desc: "Mezcla clásica para cappuccino cremoso.", tags: ["Café", "Clásico"], img: "assets/new_images/cappuccino.jpg" },
+  { id: 18, nombre: "Latte - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Tostado equilibrado ideal para latte.", tags: ["Café", "Latte"], img: "assets/new_images/latte.jpg" },
+  { id: 19, nombre: "Latte Dorado (Golden Latte) - Café (200g)", categoria: "cafes", precio: 50.00, rating: 4.6, desc: "Mezcla con cúrcuma y especias, sabor suave.", tags: ["Café", "Golden"], img: "assets/new_images/latte_dorado.jpg" },
+  { id: 20, nombre: "Latte Verde - Café (200g)", categoria: "cafes", precio: 50.00, rating: 4.4, desc: "Variante con matcha y notas herbales.", tags: ["Café", "Matcha"], img: "assets/new_images/latte_verde.jpg" },
+  { id: 21, nombre: "Hazelnut Latte - Café (200g)", categoria: "cafes", precio: 50.00, rating: 4.3, desc: "Aromas de avellana tostada para bebidas dulces.", tags: ["Café", "Saborizado"], img: "assets/new_images/hazelnut_latte.jpg" },
+  { id: 22, nombre: "Mocha - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Mezcla para bebidas mocha con chocolate natural.", tags: ["Café", "Chocolate"], img: "assets/new_images/mocha.jpg" },
+  { id: 23, nombre: "Café Black - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.6, desc: "Café puro para apreciar cuerpo y amargor.", tags: ["Café"], img: "assets/new_images/cafe_black.jpg" },
+  { id: 24, nombre: "Café Divina Hot Chocolate - (15 sobres)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Chocolate caliente premium infusionado con Reishi.", tags: ["Café", "Chocolate"], img: "assets/new_images/cafedivina_hot.jpg" }
 ];
 
 let carrito = JSON.parse(localStorage.getItem('vidaverde_cart')) || [];
