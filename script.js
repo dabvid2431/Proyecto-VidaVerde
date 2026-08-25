@@ -10,7 +10,7 @@ const productos = [
 
   // Suplementos / productos funcionales
   { id: 10, nombre: "Ignite - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.6, desc: "Fórmula estimulante para rendimiento y energía.", tags: ["Suplemento"], img: "assets/new_images/ignite.jpg" },
-  { id: 11, nombre: "Youth (Juventud colágeno)", categoria: "suplementos", precio: 50.00, rating: 4.7, desc: "Colágeno y nutrientes para piel y articulaciones.", tags: ["Colágeno"], img: "assets/new_images/youth_colageno.jpg" },
+  { id: 11, nombre: "Youth - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.7, desc: "Mezcla patentada de aminoácidos esenciales L-Arginina y L-Glutamina.", tags: ["Colágeno", "Suplemento"], img: "assets/new_images/youth_colageno.jpg" },
   { id: 12, nombre: "Cheat (Chet) - Suplemento", categoria: "suplementos", precio: 50.00, rating: 4.5, desc: "Complemento para apoyo en rutinas específicas.", tags: ["Suplemento"], img: "assets/new_images/cheat.jpg" },
 
   // Línea de Cafés (varios productos)
