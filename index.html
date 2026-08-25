@@ -283,17 +283,19 @@
     </div>
   </section>
 
-  <!-- MODAL DE VISTA PREVIA RÁPIDA DE PRODUCTO -->
+    <!-- MODAL DE VISTA PREVIA RÁPIDA DE PRODUCTO -->
   <div id="product-modal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+    <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative flex flex-col md:flex-row">
       <button onclick="cerrarModalProducto()" class="absolute top-3 right-3 z-10 w-8 h-8 bg-stone-100 hover:bg-stone-200 rounded-full flex items-center justify-center text-stone-600">
         <i data-lucide="x" class="w-4 h-4"></i>
       </button>
 
-      <div class="w-full md:w-1/2 bg-stone-100 h-56 md:h-auto">
-        <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+      <!-- Contenedor de la Imagen Optimizado -->
+      <div class="w-full md:w-1/2 bg-stone-100 p-4 flex items-center justify-center min-h-[280px] md:min-h-full">
+        <img id="modal-img" src="" alt="" class="w-full h-auto max-h-[350px] object-contain rounded-xl">
       </div>
 
+      <!-- Detalle del Producto -->
       <div class="p-6 w-full md:w-1/2 flex flex-col justify-between space-y-4">
         <div>
           <span id="modal-tag" class="bg-brand-green-light text-brand-green text-[10px] font-bold px-2.5 py-1 rounded-full uppercase"></span>
@@ -311,6 +313,7 @@
       </div>
     </div>
   </div>
+  
 
   <!-- MODAL CARRITO -->
   <div id="cart-modal" class="fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 hidden flex justify-end">
