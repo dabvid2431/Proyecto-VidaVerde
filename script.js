@@ -25,7 +25,8 @@ const productos = [
   { id: 21, nombre: "Hazelnut Latte - Café (200g)", categoria: "cafes", precio: 50.00, rating: 4.3, desc: "Aromas de avellana tostada para bebidas dulces.", tags: ["Café", "Saborizado"], img: "assets/new_images/hazelnut_latte.jpg" },
   { id: 22, nombre: "Mocha - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Mezcla para bebidas mocha con chocolate natural.", tags: ["Café", "Chocolate"], img: "assets/new_images/mocha.jpg" },
   { id: 23, nombre: "Café Black - Café (250g)", categoria: "cafes", precio: 50.00, rating: 4.6, desc: "Café puro para apreciar cuerpo y amargor.", tags: ["Café"], img: "assets/new_images/cafe_black.jpg" },
-  { id: 24, nombre: "Café Divina Hot Chocolate - (15 sobres)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Chocolate caliente premium infusionado con Reishi.", tags: ["Café", "Chocolate"], img: "assets/new_images/cafedivina_hot.jpg" }
+  { id: 24, nombre: "Café Divina Hot Chocolate - (15 sobres)", categoria: "cafes", precio: 50.00, rating: 4.5, desc: "Chocolate caliente premium infusionado con Reishi.", tags: ["Café", "Chocolate"], img: "assets/new_images/cafedivina_hot.jpg" },
+  { id: 25, nombre: "Sleep N' Lose - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.8, desc: "Fórmula de sueño nocturno 100% natural que apoya el control de peso.", tags: ["Sueño", "Suplemento"], img: "assets/new_images/sleep_n_lose.jpg" }
 ];
 
 let carrito = JSON.parse(localStorage.getItem('vidaverde_cart')) || [];
