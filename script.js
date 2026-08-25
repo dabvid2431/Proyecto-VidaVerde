@@ -9,7 +9,7 @@ const productos = [
   { id: 8, nombre: "Gano - Cápsulas (90 caps)", categoria: "suplementos", precio: 50.00, rating: 4.6, desc: "Ganoderma Lucidum (Reishi) en cápsulas para apoyo inmunológico.", tags: ["Suplemento", "Reishi"], img: "assets/new_images/gano.jpg" },
 
   // Suplementos / productos funcionales
-  { id: 26, nombre: "CX/90 - Polvo (1.5 oz)", categoria: "suplementos", precio: 50.00, rating: 4.7, desc: "Fórmula para espolvorear en comidas que ayuda a bloquear carbohidratos y grasas.", tags: ["Suplemento", "Bloqueador"], img: "assets/new_images/cx90.jpg" },
+  { id: 9, nombre: "CX/90 - Polvo (1.5 oz)", categoria: "suplementos", precio: 50.00, rating: 4.7, desc: "Fórmula para espolvorear en comidas que ayuda a bloquear carbohidratos y grasas.", tags: ["Suplemento", "Bloqueador"], img: "assets/new_images/cx90.jpg" },
   { id: 10, nombre: "Ignite - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.6, desc: "Fórmula estimulante para rendimiento y energía.", tags: ["Suplemento"], img: "assets/new_images/ignite.jpg" },
   { id: 11, nombre: "Youth - Cápsulas (60 caps)", categoria: "suplementos", precio: 50.00, rating: 4.7, desc: "Mezcla patentada de aminoácidos esenciales L-Arginina y L-Glutamina.", tags: ["Colágeno", "Suplemento"], img: "assets/new_images/youth_colageno.jpg" },
   { id: 12, nombre: "Cheat (Chet) - Suplemento", categoria: "suplementos", precio: 50.00, rating: 4.5, desc: "Complemento para apoyo en rutinas específicas.", tags: ["Suplemento"], img: "assets/new_images/cheat.jpg" },
